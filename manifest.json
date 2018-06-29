@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "otvet.mail.ru BanList",
+  "description": "Скрывать вопросы нежелательных пользователей на сайте otvet.mail.ru ",
+  "version": "1.2",
+  "browser_action": {
+    "default_icon": "logo.jpg",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://otvet.mail.ru/*", "https://otvet.mail.ru/*" , "https://otvet.mail.ru/question/*", "http://otvet.mail.ru/question/*" ],
+      "js": ["jquery-3.3.1.min.js", "myscript.js"],
+      "css": [ "style-ext.css" ]
+    }
+  ],
+  "web_accessible_resources": ["logo1.png", "logo2.png"],
+  "permissions": ["storage"]
+}
